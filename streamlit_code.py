@@ -3,7 +3,7 @@ import streamlit as st
 import glob
 #from typing_extensions import TypeGuard
 
-st.title("Audio Examples of paper: Speech2Sing: A Zero-Shot Many-to-Many Speech to Sing Neural Network")
+st.title("Audio Examples of paper SingIt: A Zero-Shot Many-to-Many Speech to Sing Neural Network")
 # st.set_page_config(layout="wide")
 
 
@@ -35,7 +35,8 @@ with col3:
 
 with col4:
     #files_dir = '/dsi/gannot-lab/sample_audio/sample_audio/full_flow/'
-    mix_file = os.path.join(files_dir, 'output-combined_with_accompany.wav')
+    #mix_file = os.path.join(files_dir, 'output-combined_with_accompany.wav')
+    ix_file = 'person_b-m2_s5_speech.wav'
     st.text('output4 signal:')
     st.audio(mix_file)
     #"/dsi/gannot-lab/sample_audio/sample_audio/full_flow/output-combined_with_accompany.wav"

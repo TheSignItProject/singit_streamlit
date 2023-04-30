@@ -117,12 +117,12 @@ st.markdown("""---""")
 # Section 1 - SingIt Transfer
 st.header('SingIt Style Transfer Examples')
 
-col1, col2, col3 = st.columns([2.5, 5, 2.5])
-col2.image("figures/High_level_overview.png", use_column_width=True, caption="High level system overview")
+col1, col2, col3 = st.columns([1.5, 5, 1.5])
+col2.image("figures/General_Solution_Architecture_with_numbers.png", use_column_width=True, caption="Detailed Solution Architecture")
 
-st.write("The numbering in the example tables shown here follow the numbers in the figure above.")
+st.write("The numbering in the example tables below follow the numbers in the figure above.")
 # Song 1
-st.subheader('Song 1 - Hallelujah')
+st.subheader('Song 1 - "Hallelujah"')
 cols = st.columns(5)
 cols[1].write("Segment A")
 cols[2].write("Segment B")
@@ -145,7 +145,7 @@ for i in range(5):
 st.write("Person B is 'Male 2 Song 5 Speech' from the 'NHSS' database. Separation of the original audio was done by the 'Spleeter' tool")
 
 # Song 2
-st.subheader('Song 2 - Hey Jude')
+st.subheader('Song 2 - "Hey Jude"')
 cols = st.columns(5)
 cols[1].write("Segment A")
 cols[2].write("Segment B")
@@ -169,7 +169,7 @@ st.write("Person B is 'Female 1 Song 7 Speech', and Person A is 'Male 2 Song 5 S
 st.write("The backing track was taken from online source, and not done by the 'Spleeter' tool.")
 
 # Song 3
-st.subheader('Song 3 - Billie Jean')
+st.subheader('Song 3 - "Billie Jean"')
 cols = st.columns(5)
 cols[1].write("Short segment")
 cols[2].write(" ")
@@ -198,7 +198,8 @@ st.markdown("""---""")
 st.header('Further Audio Samples')
 
 st.subheader('Spleeter')
-st.write("The following audio samples present the capabilities of the 'Spleeter' tool incorporated in the system")
+st.write("The following audio samples present the capabilities of the 'Spleeter' tool incorporated in the system.")
+st.markdown("‘Spleeter’ - a Python package that receives a song (mix of vocals and instruments) as an input and can separate the song into different stems (channels).")
 st.markdown("[Spleeter homepage](https://research.deezer.com/projects/spleeter.html) | [Spleeter GitHub](https://github.com/deezer/spleeter)")
 cols = st.columns(5)
 cols[1].write("Original")
@@ -209,13 +210,12 @@ cols[3].write(" ")
 row_names = ["Beautiful - Christina Aguilera", "Circle of Life - Elton John", "My Way - Frank Sinatra",
              "Nessum Dorma - Luciano Pavarotti", "Yesterday - The Beatles"]
 dir_path = "wavs/Spleeter/"
-wav_df = [["spleeter_beautiful-instrumentals.mp3", "spleeter_beautiful-instrumentals.mp3", "spleeter_beautiful-vocals.mp3", " "],
-          ["spleeter_circle_of_life-instrumentals.mp3", "spleeter_circle_of_life-instrumentals.mp3", "spleeter_circle_of_life-vocals.mp3", " "],
-          ["spleeter_my_way-instrumentals.mp3", "spleeter_my_way-instrumentals.mp3", "spleeter_my_way-vocals.mp3", " "],
-          ["spleeter_nessun_dorma-instrumentals.mp3", "spleeter_nessun_dorma-instrumentals.mp3", "spleeter_nessun_dorma-vocals.mp3", " "],
-          ["spleeter_yesterday-instrumentals.mp3", "spleeter_yesterday-instrumentals.mp3", "spleeter_yesterday-vocals.mp3", " "]]
+wav_df = [["spleeter_christina_aguilera_beautiful.mp3", "spleeter_christina_aguilera_beautiful-instrumental.mp3", "spleeter_christina_aguilera_beautiful-vocals.mp3", " "],
+          ["spleeter_frank_sinatra_my_way.mp3", "spleeter_frank_sinatra_my_way-instrumental.mp3", "spleeter_frank_sinatra_my_way-vocals.mp3", " "],
+          ["spleeter_Luciano_Pavarotti_nessun_dorma.mp3", "spleeter_Luciano_Pavarotti_nessun_dorma-instrumental.mp3", "spleeter_Luciano_Pavarotti_nessun_dorma-vocals.mp3", " "],
+          ["spleeter_The_Beatles_yesterday.mp3", "spleeter_The_Beatles_yesterday-instrumental.mp3", "spleeter_The_Beatles_yesterday-vocals.mp3", " "]]
 
-for i in range(5):
+for i in range(4):
     cols = st.columns(5)
     cols[0].write(row_names[i])
     for j in range(4):
@@ -223,6 +223,7 @@ for i in range(5):
             cols[j+1].text(" ")
             continue
         cols[j+1].audio(dir_path+wav_df[i][j])
+st.markdown("""---""")
 
 
 # NHSS

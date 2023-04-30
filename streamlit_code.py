@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 import glob
-import pandas as pd
+
 #from typing_extensions import TypeGuard
 
 st.title("Audio Examples of paper SingIt: A Zero-Shot Many-to-Many Speech to Sing Neural Network")
@@ -10,11 +10,6 @@ st.image('High_level_overview.png')
 
 files_dir = '/sample_audio/sample_audio/full_flow/'
 
-df = pd.DataFrame(
-   np.random.randn(10, 5),
-   columns=('col %d' % i for i in range(5)))
-
-st.table(df)
 
 col1, col2, col3, col4 = st.columns(4)
 with col1:

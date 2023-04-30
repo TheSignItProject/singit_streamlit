@@ -5,7 +5,7 @@ import glob
 
 st.title("Audio Examples of paper SingIt: A Zero-Shot Many-to-Many Speech to Sing Neural Network")
 # st.set_page_config(layout="wide")
-#st.image()
+st.image('High_level_overview.png')
 
 files_dir = '/sample_audio/sample_audio/full_flow/'
 col1, col2, col3, col4 = st.columns(4)

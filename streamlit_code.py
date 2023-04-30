@@ -130,7 +130,7 @@ st.markdown("[NHSS paper](https://arxiv.org/abs/2012.00337) | [NHSS database hom
 
 cols = st.columns(5)
 cols[1].write("Speech")
-cols[2].write("Song")
+cols[2].write("Singing")
 cols[3].write(" ")
 cols[4].write(" ")
 

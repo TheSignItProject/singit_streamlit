@@ -1,6 +1,7 @@
 import os
 import streamlit as st
 import glob
+import pandas as pd
 #from typing_extensions import TypeGuard
 
 st.title("Audio Examples of paper SingIt: A Zero-Shot Many-to-Many Speech to Sing Neural Network")

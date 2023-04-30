@@ -108,7 +108,7 @@ import streamlit as st
 st.set_page_config(page_title="SingIt! Singer Voice Transformation", layout="wide")
 st.title("SingIt! Singer Voice Transformation")
 
-col1, col2 = st.columns([5, 2])
+col1, col2 = st.columns([5, 3])
 col1.markdown("**Abstract:** In this paper, we propose a model which can generate a singing voice from normal speech utterance by harnessing zero-shot, many-to-many style transfer learning. Our goal is to give anyone the opportunity to sing any song in a timely manner. We present a system comprising several available blocks, as well as a modified auto-encoder, and show how this highly-complex challenge can be achieved by tailoring rather simple solutions together. We demonstrate the applicability of the proposed system using a group of 25 non-expert listeners. Samples of the data generated from our model are provided.")
 col2.image("figures/High_level_overview.png", caption="High level system overview")
 
@@ -117,7 +117,7 @@ st.markdown("""---""")
 # Section 1 - SingIt Transfer
 st.header('SingIt Style Transfer Examples')
 
-col1, col2, col3 = st.columns([2.5, 5, 2.5])
+col1, col2, col3 = st.columns([3.5, 5, 3.5])
 col2.image("figures/General_Solution_Architecture_with_numbers.png", use_column_width=True, caption="Detailed Solution Architecture")
 
 st.write("The numbering in the example tables below follow the numbers in the figure above.")

@@ -8,8 +8,6 @@ col2.write(" \n")
 col2.write(" \n")
 col2.write(" \n")
 col2.write(" \n")
-col2.write(" \n")
-col2.write(" \n")
 col2.image("figures/High_level_overview.png", caption="High level system overview")
 
 st.markdown("""---""")
@@ -17,7 +15,7 @@ st.markdown("""---""")
 # Section 1 - SingIt Transfer
 st.header('SingIt Style Transfer Examples')
 
-col1, col2, col3 = st.columns([1.5, 5, 1.5])
+col1, col2, col3 = st.columns([1, 5, 1])
 col2.image("figures/General_Solution_Architecture_with_numbers.png", use_column_width=True, caption="Detailed Solution Architecture")
 
 st.write("The numbering in the example tables below follow the numbers in the figure above.")
@@ -65,7 +63,7 @@ for i in range(5):
     cols[0].write(row_names[i])
     for j in range(4):
         cols[j+1].audio(dir_path+wav_df[i][j])
-st.write("Person B is 'Female 1 Song 7 Speech', and Person A is 'Male 2 Song 5 Song' from the 'NHSS' database.")
+st.write("Person B is 'Female 1 Song 7 Speech', and Person A is 'Male 2 Song 5 Song' are both from the 'NHSS' database.")
 st.write("The backing track was taken from online source, and not done by the 'Spleeter' tool.")
 
 # Song 3
@@ -90,7 +88,7 @@ for i in range(3):
             cols[j+1].text(" ")
             continue
         cols[j+1].audio(dir_path+wav_df[i][j])
-st.write("Person B is 'Female 1 Song 3 Speech', and Person A is 'Male 1 Song 1 Song' from the 'NHSS' database.")
+st.write("Person B is 'Female 1 Song 3 Speech', and Person A is 'Male 1 Song 1 Song' are both from the 'NHSS' database.")
 
 st.markdown("""---""")
 

@@ -107,19 +107,20 @@ import streamlit as st
 
 st.set_page_config(page_title="SingIt! Singer Voice Transformation", layout="wide")
 st.title("SingIt! Singer Voice Transformation")
-st.markdown("**Abstract:** In this paper, we propose a model which can generate a singing voice from normal speech utterance by harnessing zero-shot, many-to-many style transfer learning. Our goal is to give anyone the opportunity to sing any song in a timely manner. We present a system comprising several available blocks, as well as a modified auto-encoder, and show how this highly-complex challenge can be achieved by tailoring rather simple solutions together. We demonstrate the applicability of the proposed system using a group of 25 non-expert listeners. Samples of the data generated from our model are provided.")
-# st.image("High_level_overview.png", width=500, caption=)
 
-from PIL import Image
-background = Image.open("High_level_overview.png")
-col1, col2, col3 = st.columns([1.5, 5, 1.5])
-col2.image(background, use_column_width=True)
+col1, col2 = st.columns([5, 3])
+col1.markdown("**Abstract:** In this paper, we propose a model which can generate a singing voice from normal speech utterance by harnessing zero-shot, many-to-many style transfer learning. Our goal is to give anyone the opportunity to sing any song in a timely manner. We present a system comprising several available blocks, as well as a modified auto-encoder, and show how this highly-complex challenge can be achieved by tailoring rather simple solutions together. We demonstrate the applicability of the proposed system using a group of 25 non-expert listeners. Samples of the data generated from our model are provided.")
+col2.image("figures/High_level_overview.png", caption="High level system overview")
 
-
+st.markdown("""---""")
 
 # Section 1 - SingIt Transfer
 st.header('SingIt Style Transfer Examples')
 
+col1, col2, col3 = st.columns([2.5, 5, 2.5])
+col2.image("figures/High_level_overview.png", use_column_width=True, caption="High level system overview")
+
+st.write("The numbering in the example tables shown here follow the numbers in the figure above.")
 # Song 1
 st.subheader('Song 1 - Hallelujah')
 cols = st.columns(5)
@@ -190,3 +191,64 @@ for i in range(3):
             continue
         cols[j+1].audio(dir_path+wav_df[i][j])
 st.write("Person B is 'Female 1 Song 3 Speech', and Person A is 'Male 1 Song 1 Song' from the 'NHSS' database.")
+
+st.markdown("""---""")
+
+# Section 2 - Further Audio Samples
+st.header('Further Audio Samples')
+
+st.subheader('Spleeter')
+st.write("The following audio samples present the capabilities of the 'Spleeter' tool incorporated in the system")
+st.markdown("[Spleeter homepage](https://research.deezer.com/projects/spleeter.html) | [Spleeter GitHub](https://github.com/deezer/spleeter)")
+cols = st.columns(5)
+cols[1].write("Original")
+cols[2].write("Instrumental")
+cols[3].write("Vocal")
+cols[3].write(" ")
+
+row_names = ["Beautiful - Christina Aguilera", "Circle of Life - Elton John", "My Way - Frank Sinatra",
+             "Nessum Dorma - Luciano Pavarotti", "Yesterday - The Beatles"]
+dir_path = "wavs/Spleeter/"
+wav_df = [["spleeter_beautiful-instrumentals.mp3", "spleeter_beautiful-instrumentals.mp3", "spleeter_beautiful-vocals.mp3", " "],
+          ["spleeter_circle_of_life-instrumentals.mp3", "spleeter_circle_of_life-instrumentals.mp3", "spleeter_circle_of_life-vocals.mp3", " "],
+          ["spleeter_my_way-instrumentals.mp3", "spleeter_my_way-instrumentals.mp3", "spleeter_my_way-vocals.mp3", " "],
+          ["spleeter_nessun_dorma-instrumentals.mp3", "spleeter_nessun_dorma-instrumentals.mp3", "spleeter_nessun_dorma-vocals.mp3", " "],
+          ["spleeter_yesterday-instrumentals.mp3", "spleeter_yesterday-instrumentals.mp3", "spleeter_yesterday-vocals.mp3", " "]]
+
+for i in range(5):
+    cols = st.columns(5)
+    cols[0].write(row_names[i])
+    for j in range(4):
+        if wav_df[i][j] == " ":
+            cols[j+1].text(" ")
+            continue
+        cols[j+1].audio(dir_path+wav_df[i][j])
+
+
+# NHSS
+st.subheader('NHSS Dataset')
+st.markdown("NHSS - a database of parallel recordings of speech and singing. The audio recordings in the NHSS database correspond to a total of 100 songs sung and spoken by 10 singers, 5 male, and 5 female, resulting in a total of 7 hours of audio data.")
+st.markdown("[NHSS paper](https://arxiv.org/abs/2012.00337) | [NHSS database homepage](https://hltnus.github.io/NHSSDatabase/)")
+
+cols = st.columns(5)
+cols[1].write("Speech")
+cols[2].write("Song")
+cols[3].write(" ")
+cols[4].write(" ")
+
+row_names = ["Female 2", "Female 3", "Female 4", "Male 1", "Male 3", "Male 5"]
+dir_path = "wavs/NHSS/"
+wav_df = [["NHSS_f2_s6_speech.mp3", "NHSS_f2_s6_song.mp3", " ", " "],
+          ["NHSS_f3_s4_speech.mp3", "NHSS_f3_s4_song.mp3", " ", " "],
+          ["NHSS_f4_s3_speech.mp3", "NHSS_f4_s3_song.mp3", " ", " "],
+          ["NHSS_m1_s3_speech.mp3", "NHSS_m1_s3_song.mp3", " ", " "],
+          ["NHSS_m3_s5_speech.mp3", "NHSS_m3_s5_song.mp3", " ", " "],
+          ["NHSS_m5_s5_speech.mp3", "NHSS_m5_s5_song.mp3", " ", " "]]
+for i in range(6):
+    cols = st.columns(5)
+    cols[0].write(row_names[i])
+    for j in range(4):
+        if wav_df[i][j] == " ":
+            cols[j+1].text(" ")
+            continue
+        cols[j+1].audio(dir_path+wav_df[i][j])

@@ -19,6 +19,9 @@ col1, col2, col3 = st.columns([1, 5, 1])
 col2.image("figures/General_Solution_Architecture_with_numbers.png", use_column_width=True, caption="Detailed Solution Architecture")
 
 st.write("The numbering in the example tables below follow the numbers in the figure above.")
+st.write("Note: The speech samples provided in the following tables below (Person B) are taken from a parallel database,"
+         " hence they are speaking lyrics of songs. As explained in our paper, there is no requirement for the speaker "
+         "to say the words of the target song or any song at all. ")
 # Song 1
 st.subheader('Song 1 - "Hallelujah"')
 cols = st.columns(5)

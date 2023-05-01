@@ -68,7 +68,7 @@ for i in range(5):
     for j in range(4):
         cols[j+1].audio(dir_path+wav_df[i][j])
 st.write("Person B is 'Female 1 Song 7 - Speech', and Person A is 'Male 2 Song 5 - Song' are both from the 'NHSS' database.")
-st.write("The backing track was taken from online source, and not done by the 'Spleeter' tool. At: (https://instrumentalfx.co/the-beatles-hey-jude-instrumental/)")
+st.write("The backing track was taken from online source, and not done by the 'Spleeter' tool. [Backing track link](https://instrumentalfx.co/the-beatles-hey-jude-instrumental/)")
 st.markdown("[Backing track link](https://instrumentalfx.co/the-beatles-hey-jude-instrumental/)")
 
 # Song 3

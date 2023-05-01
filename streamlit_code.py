@@ -98,4 +98,4 @@ st.write("Person B is 'Female 1 Song 3 Speech', and Person A is 'Male 1 Song 1 S
 
 st.markdown("""---""")
 st.write("'NHSS' database: [NHSS paper](https://arxiv.org/abs/2012.00337) | [NHSS database homepage](https://hltnus.github.io/NHSSDatabase/)")
-
+st.write("'Spleeter' tool. [Spleeter homepage](https://research.deezer.com/projects/spleeter.html) | [Spleeter GitHub](https://github.com/deezer/spleeter)")

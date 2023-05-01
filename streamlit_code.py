@@ -96,3 +96,6 @@ for i in range(3):
         cols[j+1].audio(dir_path+wav_df[i][j])
 st.write("Person B is 'Female 1 Song 3 Speech', and Person A is 'Male 1 Song 1 Song' are both from the 'NHSS' database.")
 
+st.markdown("""---""")
+st.write("'NHSS' database: [NHSS paper](https://arxiv.org/abs/2012.00337) | [NHSS database homepage](https://hltnus.github.io/NHSSDatabase/)")
+

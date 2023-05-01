@@ -44,8 +44,8 @@ for i in range(5):
     for j in range(4):
         cols[j+1].audio(dir_path+wav_df[i][j])
 
-st.write("Person B is 'Male 2 Song 5 - Speech' from the 'NHSS' database. [NHSS paper](https://arxiv.org/abs/2012.00337) | [NHSS database homepage](https://hltnus.github.io/NHSSDatabase/)")
-st.write("Separation of the original audio was done by the 'Spleeter' tool. [Spleeter homepage](https://research.deezer.com/projects/spleeter.html) | [Spleeter GitHub](https://github.com/deezer/spleeter)")
+st.write("Person B is 'Male 2 Song 5 - Speech' from the 'NHSS' database.")
+st.write("Separation of the original audio was done by the 'Spleeter' tool.")
 
 # Song 2
 st.subheader('Song 2 - "Hey Jude"')

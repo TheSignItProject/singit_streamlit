@@ -30,7 +30,7 @@ cols[2].write("Segment B")
 cols[3].write("Segment C")
 cols[4].write("Segment D")
 
-row_names = ["(1) Person B - speech", "(2) Original song - mix", "(3) Original song - Instrumental solo","(4) Original song - Vocal solo","(5) SingIt transfer"]
+row_names = ["(1) Person B - speech", "(2) Original song - mix", "(3) Original song - Instrumental solo","(4) Original song - Vocal solo","(5) SingIt style transfer"]
 dir_path = "wavs/SingIt_Transfer/Song_1_Hallelujah/"
 wav_df = [["person_b-m2_s5_speech_crop.wav", "person_b-m2_s5_speech_crop.wav", "person_b-m2_s5_speech_crop.wav", "person_b-m2_s5_speech_crop.wav"],
           ["1_mix_1.wav", "1_mix_2.wav", "1_mix_3.wav", "1_mix_4.wav"],
@@ -53,7 +53,7 @@ cols[2].write("Segment B")
 cols[3].write("Segment C")
 cols[4].write("Segment D")
 
-row_names = ["(1) Person B - speech", "(2) Original song - mix", "(3) Original song - Instrumental solo","(4) Original song - Vocal solo","(5) SingIt transfer"]
+row_names = ["(1) Person B - speech", "(2) Original song - mix", "(3) Original song - Instrumental solo","(4) Original song - Vocal solo","(5) SingIt style transfer"]
 dir_path = "wavs/SingIt_Transfer/Song_2_Hey_Jude/"
 wav_df = [["style-f1_s7_speech_crop.wav", "style-f1_s7_speech_crop.wav", "style-f1_s7_speech_crop.wav", "style-f1_s7_speech_crop.wav"],
           ["1_mix_1.wav", "1_mix_2.wav", "1_mix_3.wav", "1_mix_4.wav"],
@@ -77,7 +77,7 @@ cols[2].write(" ")
 cols[3].write(" ")
 cols[4].write(" ")
 
-row_names = ["(1) Person B - speech", "(4) Vocal solo", "(5) SingIt transfer"]
+row_names = ["(1) Person B - speech", "(4) Vocal solo", "(5) SingIt style transfer"]
 dir_path = "wavs/SingIt_Transfer/Song_3_Billie_Jean/"
 wav_df = [["content-M1_S01_short_song_2.wav", " ", " ", " "],
           ["style-F1_Song_03_speech_2.wav", " ", " ", " "],

@@ -127,7 +127,7 @@ for i in range(4):
         cols[j+1].audio(dir_path+wav_df[i][j])
 st.markdown("""---""")
 
-
+"""
 # NHSS
 st.subheader('NHSS Dataset')
 st.markdown("NHSS - a database of parallel recordings of speech and singing. The audio recordings in the NHSS database correspond to a total of 100 songs sung and spoken by 10 singers, 5 male, and 5 female, resulting in a total of 7 hours of audio data.")
@@ -155,5 +155,5 @@ for i in range(6):
             cols[j+1].text(" ")
             continue
         cols[j+1].audio(dir_path+wav_df[i][j])
-
+"""
 

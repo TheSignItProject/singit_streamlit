@@ -30,7 +30,7 @@ cols[2].write("Segment B")
 cols[3].write("Segment C")
 cols[4].write("Segment D")
 
-row_names = ["(1) Person B - speech", "(2) Original song", "(3) Instrumental solo","(4) Vocal solo","(5) SingIt transfer"]
+row_names = ["(1) Person B - speech", "(2) Original song - mix", "(3) Original song - Instrumental solo","(4) Original song - Vocal solo","(5) SingIt transfer"]
 dir_path = "wavs/SingIt_Transfer/Song_1_Hallelujah/"
 wav_df = [["person_b-m2_s5_speech_crop.wav", "person_b-m2_s5_speech_crop.wav", "person_b-m2_s5_speech_crop.wav", "person_b-m2_s5_speech_crop.wav"],
           ["1_mix_1.wav", "1_mix_2.wav", "1_mix_3.wav", "1_mix_4.wav"],

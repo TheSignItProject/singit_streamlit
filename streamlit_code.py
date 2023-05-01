@@ -53,7 +53,7 @@ cols[2].write("Segment B")
 cols[3].write("Segment C")
 cols[4].write("Segment D")
 
-row_names = ["(1) Person B - speech", "(2) Original song", "(3) Instrumental solo","(4) Vocal solo","(5) SingIt transfer"]
+row_names = ["(1) Person B - speech", "(2) Original song - mix", "(3) Original song - Instrumental solo","(4) Original song - Vocal solo","(5) SingIt transfer"]
 dir_path = "wavs/SingIt_Transfer/Song_2_Hey_Jude/"
 wav_df = [["style-f1_s7_speech_crop.wav", "style-f1_s7_speech_crop.wav", "style-f1_s7_speech_crop.wav", "style-f1_s7_speech_crop.wav"],
           ["1_mix_1.wav", "1_mix_2.wav", "1_mix_3.wav", "1_mix_4.wav"],
@@ -95,6 +95,7 @@ st.write("Person B is 'Female 1 Song 3 Speech', and Person A is 'Male 1 Song 1 S
 
 st.markdown("""---""")
 
+"""
 # Section 2 - Further Audio Samples
 st.header('Further Audio Samples')
 
@@ -153,3 +154,4 @@ for i in range(6):
             cols[j+1].text(" ")
             continue
         cols[j+1].audio(dir_path+wav_df[i][j])
+"""

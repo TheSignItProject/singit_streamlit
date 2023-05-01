@@ -43,7 +43,7 @@ for i in range(5):
     cols[0].write(row_names[i])
     for j in range(4):
         cols[j+1].audio(dir_path+wav_df[i][j])
-st.write("Person B is 'Male 2 Song 5 - Speech' from the 'NHSS' database. Separation of the original audio was done by the 'Spleeter' tool. [Spleeter homepage](https://research.deezer.com/projects/spleeter.html) | [Spleeter GitHub](https://github.com/deezer/spleeter)")
+st.write("Person B is 'Male 2 Song 5 - Speech' from the 'NHSS' database. Separation of the original audio was done by the 'Spleeter' tool.")
 st.markdown("[Spleeter homepage](https://research.deezer.com/projects/spleeter.html) | [Spleeter GitHub](https://github.com/deezer/spleeter)")
 
 # Song 2

@@ -93,8 +93,8 @@ for i in range(3):
         cols[j+1].audio(dir_path+wav_df[i][j])
 st.write("Person B is 'Female 1 Song 3 Speech', and Person A is 'Male 1 Song 1 Song' are both from the 'NHSS' database.")
 
-"""
-# st.markdown("""---""")
+
+st.markdown("""---""")
 
 
 # Section 2 - Further Audio Samples
@@ -155,4 +155,4 @@ for i in range(6):
             cols[j+1].text(" ")
             continue
         cols[j+1].audio(dir_path+wav_df[i][j])
-"""
+

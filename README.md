@@ -1,4 +1,4 @@
-# SingIt! 🎤 Voice Transformation Streamlit App
+# SingIt! 🎤 Singer Voice Transformation Streamlit App
 
 This repository contains the code for the **Streamlit** web page of the **SingIt!** project – a singing voice transformation system.
 

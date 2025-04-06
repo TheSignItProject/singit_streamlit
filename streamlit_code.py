@@ -16,7 +16,10 @@ st.markdown("""---""")
 st.header('SingIt Style Transfer Examples')
 
 col1, col2, col3 = st.columns([1, 5, 1])
-col2.image("figures/General_Solution_Architecture_with_numbers.png", use_column_width=True, caption="Detailed Solution Architecture")
+# col2.image("figures/General_Solution_Architecture_with_numbers.png", use_column_width=True, caption="Detailed Solution Architecture")  # original
+# above line got this: The use_column_width parameter has been deprecated and will be removed in a future release. Please utilize the use_container_width parameter instead.
+col2.image("figures/General_Solution_Architecture_with_numbers.png", use_container_width=True, caption="Detailed Solution Architecture")  # original
+
 
 st.write("The numbering in the example tables below follow the numbers in the figure above.")
 st.write("Note: The speech samples provided in the following tables below (Person B) are taken from a parallel database,"
